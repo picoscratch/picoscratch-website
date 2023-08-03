@@ -1,0 +1,127 @@
+body {
+	margin: 0;
+	height: fit-content;
+	background-color: #0e0e0e;
+	color: white;
+	font-family: "Roboto Round";
+	font-size: 1.5rem;
+}
+
+h1 {
+	letter-spacing: -1.6px;
+}
+
+h2, h3, span {
+	letter-spacing: -0.5px;
+	line-height: 25px;
+}
+
+header {
+	background-color: rgba(37, 176, 245, 0.9);
+	background-image: url(noise.png);
+	background-size: contain;
+	position: sticky;
+	top: 0;
+	backdrop-filter: blur(15px);
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header img {
+	width: 15em;
+}
+
+header nav {
+	padding: 20px;
+	display: flex;
+	gap: 15px;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.8rem;
+	border-right: 2px solid white;
+	padding-right: 15px;
+}
+
+header nav a:last-of-type {
+	border-right: none;
+}
+
+section {
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+section div {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+}
+
+section * {
+	margin: 0;
+}
+
+footer {
+	background-color: #25b0f5;
+	text-align: center;
+	padding: 10px;
+	background-image: url(bottom-waves.svg);
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	background-size: 100vw;
+	padding-top: 15%;
+}
+
+section:nth-of-type(1) {
+	background-color: #ffab1a; /* control */
+	background-image: url(transition-1-2.svg);
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	background-size: 100vw;
+	padding-bottom: 15%;
+}
+section:nth-of-type(2) {
+	background-color: #59c059; /* operators */
+}
+section:nth-of-type(3) {
+	background-color: #5cb1d6; /* sensing */
+	background-image: url(transition-2-3.svg);
+	background-repeat: no-repeat;
+	background-position-y: top;
+	background-size: 100vw;
+	padding-top: 20%;
+}
+section:nth-of-type(4) {
+	background-color: #ff6680; /* more */
+	background-image: url(transition-3-4.svg);
+	background-repeat: no-repeat;
+	background-position-y: top;
+	background-size: 100vw;
+	padding-top: 35%;
+}
+section:nth-of-type(5) {
+	background-color: #0fbd8c; /* pen */
+	background-image: url(transition-4-5.svg);
+	background-repeat: no-repeat;
+	background-position-y: top;
+	background-size: 100vw;
+	padding-top: 15%;
+}
+section:nth-of-type(6) {
+	background-color: #9966ff; /* looks */
+	background-image: url(transition-5-6.svg);
+	background-repeat: no-repeat;
+	background-position-y: top;
+	background-size: 100vw;
+	padding-top: 15%;
+}

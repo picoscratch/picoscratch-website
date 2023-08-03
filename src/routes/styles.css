@@ -1,0 +1,43 @@
+@import "./font.css";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	height: fit-content;
+	background-color: #0e0e0e;
+	color: white;
+	font-family: "Roboto Round";
+	font-size: 1.5rem;
+}
+
+h1 {
+	letter-spacing: -1.6px;
+}
+
+h2, h3, span {
+	letter-spacing: -0.5px;
+	line-height: 35px;
+}
+
+section {
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 50px;
+	flex-wrap: wrap;
+}
+
+section div {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+}
+
+section * {
+	margin: 0;
+}
