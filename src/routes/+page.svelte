@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>PicoScratch, die Lernsoftware für den Raspberry Pi Pico</title>
+	<title>PicoScratch, die spannende Lernsoftware für den Raspberry Pi Pico</title>
 	<meta name="description" content="PicoScratch ist eine einfache Lernsoftware für den Raspberry Pi Pico. Die Software bietet für Lehrer ein übersichtliches und intuitives Managementportal." />
 	<link rel="canonical" href="https://www.picoscratch.de/" />
 </svelte:head>
