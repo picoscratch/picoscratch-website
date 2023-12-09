@@ -7,21 +7,24 @@
 	}
 </script>
 
-<footer>
-	PicoScratch
+<footer class={path == "/help" ? "help" : ""}>
+	PicoScratch is not endorsed, sponsored, or affiliated with the Scratch Foundation in any way.
 </footer>
 
 <style>
 	footer {
-		background-color: var(--accent);
-		color: var(--background);
+		background-color: #25b0f5;
 		text-align: center;
 		padding: 10px;
+		background-image: url($lib/images/transitions/bottom-waves.svg);
 		background-repeat: no-repeat;
 		background-position-y: bottom;
 		background-size: 100vw;
-		margin: 20px;
-		border-radius: 10px;
+		padding-top: 15%;
+	}
+
+	.help {
+		background-image: url($lib/images/transitions/bottom-waves-help.svg);
 	}
 
 	@media(max-width: 1200px) {

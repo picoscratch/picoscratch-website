@@ -40,8 +40,8 @@
 </svelte:head>
 
 <style>
-	section:nth-of-type(1) {
-		background-color: #ffab1a; /* control */
+	/* section:nth-of-type(1) {
+		background-color: #ffab1a;
 		background-image: url($lib/images/transitions/transition-1-2.svg);
 		background-repeat: no-repeat;
 		background-position-y: bottom;
@@ -49,11 +49,11 @@
 		padding-bottom: 15%;
 	}
 	section:nth-of-type(2) {
-		background-color: #59c059; /* operators */
+		background-color: #59c059;
 		color: black;
 	}
 	section:nth-of-type(3) {
-		background-color: #5cb1d6; /* sensing */
+		background-color: #5cb1d6;
 		background-image: url($lib/images/transitions/transition-2-3.svg);
 		background-repeat: no-repeat;
 		background-position-y: top;
@@ -61,7 +61,7 @@
 		padding-top: 20%;
 	}
 	section:nth-of-type(4) {
-		background-color: #ff6680; /* more */
+		background-color: #ff6680;
 		background-image: url($lib/images/transitions/transition-3-4.svg);
 		background-repeat: no-repeat;
 		background-position-y: top;
@@ -69,7 +69,7 @@
 		padding-top: 35%;
 	}
 	section:nth-of-type(5) {
-		background-color: #0fbd8c; /* pen */
+		background-color: #0fbd8c;
 		background-image: url($lib/images/transitions/transition-4-5.svg);
 		background-repeat: no-repeat;
 		background-position-y: top;
@@ -77,13 +77,13 @@
 		padding-top: 15%;
 	}
 	section:nth-of-type(6) {
-		background-color: #9966ff; /* looks */
+		background-color: #9966ff;
 		background-image: url($lib/images/transitions/transition-5-6.svg);
 		background-repeat: no-repeat;
 		background-position-y: top;
 		background-size: 100vw;
 		padding-top: 15%;
-	}
+	} */
 
 	section {
 		flex-direction: column;

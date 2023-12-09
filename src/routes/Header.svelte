@@ -1,4 +1,5 @@
 <script lang="ts">
+	// @ts-ignore
 	import logo from "$lib/images/picoscratch-large.png?format=webp&w=500";
 	import { page } from '$app/stores';
 	import { fade } from "svelte/transition";
@@ -33,17 +34,18 @@
 		</div>
 		<nav class={navShown ? "" : "hidden"}>
 			<a class={path == "/" ? "active" : ""} href="/">Home</a>
-			<a class={path == "/downloads" ? "active" : ""} href="/downloads/">Downloads</a>
-			<a href="https://manager.picoscratch.de/">Manager</a>
-			<a href="https://manager.picoscratch.de/register/">Demo</a>
-			<a class={path == "/help" ? "active" : ""} href="/help/">Hilfe</a>
+			<a class={path == "/learn" ? "active" : ""} href="/learn">Learn</a>
+			<!-- <a class={path == "/downloads" ? "active" : ""} href="/downloads/">Downloads</a> -->
+			<!-- <a href="https://manager.picoscratch.de/">Manager</a> -->
+			<!-- <a href="https://manager.picoscratch.de/register/">Demo</a> -->
+			<!-- <a class={path == "/help" ? "active" : ""} href="/help/">Hilfe</a> -->
 		</nav>
 	</div>
 </header>
 
 <style>
 	header {
-		background-color: rgba(37, 176, 245, 0.9);
+		background-color: hsl(var(--background-hsl) / 0.5);
 		background-image: url($lib/images/noise.webp);
 		background-size: contain;
 		position: sticky;
@@ -56,7 +58,7 @@
 	}
 
 	header img {
-		width: 15em;
+		width: 10em;
 	}
 
 	header nav {
