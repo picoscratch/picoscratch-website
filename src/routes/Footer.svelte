@@ -8,7 +8,10 @@
 </script>
 
 <footer>
-	PicoScratch
+	<span>PicoScratch</span>
+	<div class="links">
+		<a href="/impressum">Impressum</a>
+	</div>
 </footer>
 
 <style>
@@ -22,6 +25,12 @@
 		background-size: 100vw;
 		margin: 20px;
 		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 5px;
+		view-transition-name: footer;
 	}
 
 	@media(max-width: 1200px) {

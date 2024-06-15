@@ -1,6 +1,6 @@
 <script lang="ts">
 	// @ts-ignore
-	import logo from "$lib/images/picoscratch-large.png?format=webp&w=500";
+	import logo from "$lib/images/picoscratch-large.png?format=webp&w=512";
 	import { page } from '$app/stores';
 	import { fade } from "svelte/transition";
   import { onMount } from "svelte";
@@ -35,6 +35,7 @@
 		<nav class={navShown ? "" : "hidden"}>
 			<a class={path == "/" ? "active" : ""} href="/">Home</a>
 			<a class={path == "/learn" ? "active" : ""} href="/learn">Learn</a>
+			<a class={path == "/mint" ? "active" : ""} href="/mint">MINT</a>
 			<!-- <a class={path == "/downloads" ? "active" : ""} href="/downloads/">Downloads</a> -->
 			<!-- <a href="https://manager.picoscratch.de/">Manager</a> -->
 			<!-- <a href="https://manager.picoscratch.de/register/">Demo</a> -->
@@ -55,6 +56,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		view-transition-name: header;
 	}
 
 	header img {
@@ -119,6 +121,9 @@
 		border: 3px solid #2e2e2e;
 		background-color: #1d1d1d;
 		border-radius: 10px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
 	}
 
 	/* @media (min-width: 850px) { */

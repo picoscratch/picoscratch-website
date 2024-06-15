@@ -17,6 +17,7 @@
     "@sveltejs/kit": "^1.20.4",
     "@types/cookie": "^0.5.1",
     "gsap": "^3.12.2",
+    "mdsvex": "^0.11.0",
     "svelte": "^4.0.5",
     "svelte-check": "^3.4.3",
     "svelte-fluentui-icons": "^1.2.10",

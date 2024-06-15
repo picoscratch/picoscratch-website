@@ -41,6 +41,10 @@ body {
 	font-size: 1.5rem;
 }
 
+a {
+	color: var(--primary);
+}
+
 h1 {
 	letter-spacing: -1.6px;
 }
@@ -123,6 +127,15 @@ button a {
 	color: white;
 }
 
+a:has(button) {
+	text-decoration: none;
+	color: white;
+}
+
+a button {
+	width: 100%;
+}
+
 button.primary {
 	background-color: var(--primary);
 	border: var(--secondary) 2px solid;
@@ -138,4 +151,19 @@ button.primary:hover {
 
 button:active {
 	transform: scale(0.9);
+}
+
+input[type="text"],
+input[type="email"] {
+	font-size: 1.5rem;
+	padding: 15px;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	background-color: var(--background);
+	color: white;
+	border: var(--background-light) 2px solid;
+	transition: background-color 200ms, transform 100ms;
+	padding-left: 15px;
+	padding-right: 15px;
 }
