@@ -42,6 +42,7 @@
 		padding-left: .75rem;
 		margin-right: auto;
 		margin-left: auto;
+		box-sizing: border-box; /* Pure magic :O */
 	}
 
 	@media (min-width: 576px) {

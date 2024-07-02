@@ -74,7 +74,7 @@
 
 <section id="sec_mint_1">
 	<img src={mint} alt="PicoScratch MINT" class="hero-img" />
-	<div>
+	<div style="background-color: var(--background); padding: 20px 5px 20px 5px; box-sizing: border-box;">
 		<h2>PicoScratch MINT</h2>
 		<span>Das beste Messgerät für Ihren MINT-Unterricht!</span>
 		<div class="buttons">
@@ -171,7 +171,10 @@
 </section>
 <section style="flex-direction: column; margin-top: 50px;">
 	<h1 style="font-size: 3rem;">Support</h1>
-	<SupportPost title="Fehler" description="Häufige Fehler und deren Lösungen" link="/mint/support/errors" />
+	<div style="display: flex; gap: 5px;">
+		<SupportPost title="Datenausgabe" description="Alle Möglichkeiten Daten auszugeben." link="/mint/support/data" />
+		<SupportPost title="Fehler" description="Häufige Fehler und deren Lösungen" link="/mint/support/errors" />
+	</div>
 </section>
 <section style="margin-top: 50px;">
 	<div>
