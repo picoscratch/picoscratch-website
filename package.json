@@ -29,6 +29,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@fontsource-variable/quicksand": "^5.0.16"
+    "@fontsource-variable/quicksand": "^5.0.16",
+    "bits-ui": "^0.21.11",
+    "vaul-svelte": "^0.3.2"
   }
 }

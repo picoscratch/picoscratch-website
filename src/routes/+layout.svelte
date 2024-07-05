@@ -3,6 +3,7 @@
 	import Header from './Header.svelte';
 	import './styles.css';
 	import { onNavigate } from '$app/navigation';
+	import "picoscratch-ui/css";
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;

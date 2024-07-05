@@ -1,5 +1,6 @@
 <svelte:head>
 	<title>PicoScratch | Impressum</title>
+	<meta name="description" content="Impressum und rechtliche Hinweise zu PicoScratch. Hier finden Sie unsere Kontaktdaten, Verantwortliche und rechtliche Informationen.">
 </svelte:head>
 
 <div class="container">
@@ -49,9 +50,9 @@
 	</p>
 	<br />
 	Impressum vom
-	<a href="https://www.impressum-generator.de">Impressum Generator</a>
+	<a href="https://www.impressum-generator.de" style="text-decoration: underline;">Impressum Generator</a>
 	der
-	<a
+	<a style="text-decoration: underline;"
 		href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/"
 		rel="nofollow">Kanzlei Hasselbach, Frankfurt</a
 	>
@@ -88,5 +89,18 @@
 		padding-left: 0.75rem;
 		margin-right: auto;
 		margin-left: auto;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+		font-weight: 800;
+		letter-spacing: -0.025em;
+		scroll-margin: 5rem;
+		
+		@media (min-width: 1024px) { 
+			font-size: 3rem;
+			line-height: 1; 
+		}
 	}
 </style>

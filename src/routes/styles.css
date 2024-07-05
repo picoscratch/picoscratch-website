@@ -1,6 +1,10 @@
 @import "./font.css";
 @import '@fontsource-variable/quicksand';
 
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 :root {
 	/* --text-hsl: 75deg 13% 94%;
 	--background-hsl: 229deg 13% 17%;
@@ -64,7 +68,7 @@ section {
 	flex-wrap: wrap;
 }
 
-section div {
+section > div {
 	display: flex;
 	gap: 10px;
 	flex-direction: column;
@@ -107,7 +111,7 @@ section * {
 			slide-from-right;
 }
 
-button {
+/* button {
 	font-size: 1.5rem;
 	padding: 15px;
 	color: white;
@@ -151,12 +155,12 @@ button.primary:hover {
 
 button:active {
 	transform: scale(0.9);
-}
+} */
 
 input[type="text"],
 input[type="email"] {
 	font-size: 1.5rem;
-	padding: 15px;
+	padding: 5px;
 	color: white;
 	border: none;
 	border-radius: 15px;

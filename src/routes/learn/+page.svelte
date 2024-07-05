@@ -12,8 +12,10 @@
 	// @ts-ignore
 	import { animate } from "../gsap";
 	import Dialog from "$lib/Dialog.svelte";
-    import Accordion from "$lib/Accordion.svelte";
-    import AccordionItem from "$lib/AccordionItem.svelte";
+	import { Accordion } from "picoscratch-ui";
+    // import Accordion from "$lib/Accordion.svelte";
+    // import AccordionItem from "$lib/AccordionItem.svelte";
+    import { Button } from "picoscratch-ui";
 
 	let downloadDialogOpen = false;
 
@@ -159,6 +161,13 @@
 	:global(.app) {
 		overflow-x: hidden;
 	}
+	h2 {
+		padding-bottom: 0.5rem; 
+		font-size: 1.875rem;
+		line-height: 2.25rem; 
+		font-weight: 600; 
+		letter-spacing: -0.025em;
+	}
 </style>
 
 <Dialog open={downloadDialogOpen}>
@@ -174,31 +183,31 @@
 			<span style="color: #cdcdcd;">Der Administrator der Schule muss im <a href="https://manager.picoscratch.de">PicoScratch Manager</a> Räume anlegen.</span>
 		</ol>
 	</span>
-	<button on:click={() => {
+	<Button on:click={() => {
 		downloadDialogOpen = false;
-	}}>Schließen</button>
+	}}>Schließen</Button>
 </Dialog>
 
 <!-- <img src={grain} alt="" style="width: 100vw;"> -->
 <section style="flex-direction: column; gap: 15px;">
-	<h1 style="font-size: 4em;">PicoScratch Learn</h1>
-	<h2><strong>Die</strong> Lernsoftware für den Raspberry Pi Pico.</h2>
+	<h1 style="font-size: 4em; font-weight: 600;">PicoScratch Learn</h1>
+	<h2>Die Lernsoftware für den Raspberry Pi Pico.</h2>
 	<div class="buttons">
-		<button class="primary" on:click={() => {
+		<Button on:click={() => {
 			downloadLearnWin();
-		}}>Download</button>
-		<button>
+		}}>Download</Button>
+		<Button variant="secondary">
 			<a href="https://manager.picoscratch.de" style="display: flex; align-items: center; gap: 5px; justify-content: center;">
 				<svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.25 4.75a1.5 1.5 0 0 0-1.5 1.5v11.5a1.5 1.5 0 0 0 1.5 1.5h11.5a1.5 1.5 0 0 0 1.5-1.5v-4a1 1 0 1 1 2 0v4a3.5 3.5 0 0 1-3.5 3.5H6.25a3.5 3.5 0 0 1-3.5-3.5V6.25a3.5 3.5 0 0 1 3.5-3.5h4a1 1 0 1 1 0 2h-4Zm6.5-1a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v6.5a1 1 0 1 1-2 0V6.164l-4.793 4.793a1 1 0 1 1-1.414-1.414l4.793-4.793H13.75a1 1 0 0 1-1-1Z" fill="#ffffff"/></svg>
 				Manager
 			</a>
-		</button>
-		<button>
+		</Button>
+		<Button variant="secondary">
 			<a href="https://manager.picoscratch.de/register" style="display: flex; align-items: center; gap: 5px; justify-content: center;">
 				<svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.25 4.75a1.5 1.5 0 0 0-1.5 1.5v11.5a1.5 1.5 0 0 0 1.5 1.5h11.5a1.5 1.5 0 0 0 1.5-1.5v-4a1 1 0 1 1 2 0v4a3.5 3.5 0 0 1-3.5 3.5H6.25a3.5 3.5 0 0 1-3.5-3.5V6.25a3.5 3.5 0 0 1 3.5-3.5h4a1 1 0 1 1 0 2h-4Zm6.5-1a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v6.5a1 1 0 1 1-2 0V6.164l-4.793 4.793a1 1 0 1 1-1.414-1.414l4.793-4.793H13.75a1 1 0 0 1-1-1Z" fill="#ffffff"/></svg>
 				Demo
 			</a>
-		</button>
+		</Button>
 	</div>
 </section>
 <section>
@@ -237,7 +246,7 @@
 	<img src={logo_jf} alt="" width="500px">
 </section>
 <section style="padding-bottom: 20px;">
-	<Accordion>
+	<!-- <Accordion>
 		<AccordionItem>
 			<span slot="title">Wie mache ich ...?</span>
 			Wir arbeiten immer dran, die Software noch verständlicher zu machen. <a href="mailto:jannik.eckhardt2009@gmail.com">Bitte kontaktieren Sie uns</a>.
@@ -253,5 +262,28 @@
 			</a>
 			, und wir versuchen Ihnen so schnell wie möglich zu helfen.
 		</AccordionItem>
-	</Accordion>
+	</Accordion> -->
+	<Accordion.Root style="width: 90%;">
+		<Accordion.Item value="how-do-i">
+			<Accordion.Trigger>Wie mache ich ...?</Accordion.Trigger>
+			<Accordion.Content>
+				Wir arbeiten immer dran, die Software noch verständlicher zu machen. <a href="mailto:jannik.eckhardt2009@gmail.com" style="text-decoration: underline;">Bitte kontaktieren Sie uns</a>.
+			</Accordion.Content>
+		</Accordion.Item>
+		<Accordion.Item value="doesnt-work">
+			<Accordion.Trigger>PicoScratch Learn funktioniert nicht!</Accordion.Trigger>
+			<Accordion.Content>
+				Das tut uns leid. Bitte schauen sie auf unsere <a href="https://status.picoscratch.de" style="text-decoration: underline;">Status Seite</a> oder <a href="mailto:jannik.eckhardt2009@gmail.com" style="text-decoration: underline;">schreiben Sie uns</a>.
+			</Accordion.Content>
+		</Accordion.Item>
+		<Accordion.Item value="contact">
+			<Accordion.Trigger>Kontakt/Alles weitere</Accordion.Trigger>
+			<Accordion.Content>
+				<a href="mailto:jannik.eckhardt2009@gmail.com" style="text-decoration: underline;">
+					Schreiben Sie uns eine Email
+				</a>
+				, und wir versuchen Ihnen so schnell wie möglich zu helfen.
+			</Accordion.Content>
+		</Accordion.Item>
+	</Accordion.Root>
 </section>

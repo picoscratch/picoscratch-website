@@ -13,6 +13,8 @@
 	import { page } from "$app/stores";
 	import { goto } from "$app/navigation";
 	import { onMount } from "svelte";
+    import { Button } from "picoscratch-ui";
+    import MintPreorderDialog from "$lib/mint/preorderDialog/MINTPreorderDialog.svelte";
 
 	const INFOLIST = {
 		temperature: {
@@ -20,24 +22,28 @@
 			name: "Temperatursensor",
 			accuracy: "±0.5°C",
 			range: "-55 bis +125°C",
+			ratio: "1 / 1"
 		},
 		tds: {
 			pic: tdsSensor,
 			name: "Wasserqualitätssensor",
 			accuracy: "±10%",
 			range: "0 bis 1000 ppm",
+			ratio: "1 / 1"
 		},
 		co2: {
 			pic: co2Sensor,
 			name: "CO<sub>2</sub>-Sensor",
 			accuracy: "±50 ppm",
 			range: "400 bis 2000 ppm",
+			ratio: "1 / 1"
 		},
 		ph: {
 			pic: phSensor,
 			name: "pH-Sensor",
 			accuracy: "±0.1",
-			range: "0 bis 14 pH"
+			range: "0 bis 14 pH",
+			ratio: "1 / 1"
 		}
 	};
 
@@ -48,28 +54,34 @@
 			goto("/mint");
 		}
 	});
+
+	let newsletterOpen = false;
 </script>
 
 <svelte:head>
-	<title>{info.name} für PicoScratch MINT Messgeräte</title>
+	<title>{info.name.replace("<sub>", "").replace("</sub>", "")} für PicoScratch MINT Messgeräte</title>
 	<meta name="description" content="Der {info.name} für das PicoScratch MINT Messgerät, das einfachste Messgerät für den MINT-Unterricht.">
 </svelte:head>
 
+<MintPreorderDialog bind:open={newsletterOpen} />
+
 <section>
-	<img src={info.pic} alt={info.name} width="500rem">
+	<img src={info.pic} alt={info.name} width="400vw" style="aspect-ratio: {info.ratio}">
 	<div>
 		<h1 style="font-size: 4rem;">{@html info.name}</h1>
 		<div class="buttons">
-			<button class="primary">Vorbestellen</button>
+			<Button on:click={() => {
+				newsletterOpen = true;
+			}}>Vorbestellen</Button>
 			<a href="/mint" style="display: flex; align-items: center; gap: 5px; justify-content: center;">
-				<button>
+				<Button variant="secondary" style="width: 100%;">
 					Zurück
-				</button>
+				</Button>
 			</a>
 		</div>
 	</div>
 </section>
-<section>
+<section style="padding-top: 15px;">
 	<Card style="display: flex; flex-direction: column; gap: 15px;">
 		<div style="display: flex; gap: 10px; flex-direction: row; align-items: center;">
 			<PlusMinusIcon size=30 />
@@ -108,7 +120,11 @@
 	@media (max-width: 800px) {
 		.buttons {
 			flex-direction: column;
-			width: 100%;
+			/* width: 100%; */
+		}
+
+		h1 {
+			font-size: 2.2rem !important;
 		}
 	}
 </style>

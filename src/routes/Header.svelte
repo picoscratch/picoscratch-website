@@ -26,7 +26,7 @@
 	<div class="nav">
 		<div>
 			<a href="/">
-				<img src={logo} alt="PicoScratch">
+				<img src={logo} alt="PicoScratch" style="aspect-ratio: 3.85 / 1;">
 			</a>
 			<button bind:this={navBtn}>
 				<NavigationFilled size="40" color="white"></NavigationFilled>
