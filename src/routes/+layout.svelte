@@ -37,7 +37,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		scrollbar-gutter: stable;
 		color-scheme: dark;
 	}
