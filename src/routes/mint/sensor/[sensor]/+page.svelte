@@ -13,8 +13,8 @@
 	import { page } from "$app/stores";
 	import { goto } from "$app/navigation";
 	import { onMount } from "svelte";
-    import { Button } from "picoscratch-ui";
-    import MintPreorderDialog from "$lib/mint/preorderDialog/MINTPreorderDialog.svelte";
+	import { Button } from "picoscratch-ui";
+	import MintPreorderDialog from "$lib/mint/preorderDialog/MINTPreorderDialog.svelte";
 
 	const INFOLIST = {
 		temperature: {

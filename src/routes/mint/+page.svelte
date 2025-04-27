@@ -95,7 +95,7 @@
 	<h1 style="font-size: 3rem;">Alle Sensoren für Ihr PicoScratch MINT Messgerät</h1>
 	<div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center; justify-content: center; width: 100%; flex-direction: row;">
 		<Card.Root style="display: flex; align-items: center; padding-bottom: 10px; gap: 10px; flex-direction: column;">
-			<img src={tempsensor} alt="Temperatursensor" width="300rem" loading="lazy">
+			<img src={tempsensor} alt="Temperatursensor" width="300rem" loading="lazy" style="aspect-ratio: 1/1;">
 			<h3>Temperatursensor</h3>
 			<a href="/mint/sensor/temperature">
 				<Button>
@@ -104,7 +104,7 @@
 			</a>
 		</Card.Root>
 		<Card.Root style="display: flex; align-items: center; padding-bottom: 10px; gap: 10px; flex-direction: column;">
-			<img src={tdssensor} alt="Wasserqualitätssensor" width="300rem" loading="lazy">
+			<img src={tdssensor} alt="Wasserqualitätssensor" width="300rem" loading="lazy" style="aspect-ratio: 1/1;">
 			<h3>Wasserqualitätssensor</h3>
 			<a href="/mint/sensor/tds">
 				<Button>
@@ -113,7 +113,7 @@
 			</a>
 		</Card.Root>
 		<Card.Root style="display: flex; align-items: center; padding-bottom: 10px; gap: 10px; flex-direction: column;">
-			<img src={co2sensor} alt="CO2-Sensor" width="300rem" loading="lazy">
+			<img src={co2sensor} alt="CO2-Sensor" width="300rem" loading="lazy" style="aspect-ratio: 1/1;">
 			<h3>CO<sub>2</sub>-Sensor</h3>
 			<a href="/mint/sensor/co2">
 				<Button>
@@ -122,7 +122,7 @@
 			</a>
 		</Card.Root>
 		<Card.Root style="display: flex; align-items: center; padding-bottom: 10px; gap: 10px; flex-direction: column;">
-			<img src={phsensor} alt="pH-Sensor" width="300rem" loading="lazy">
+			<img src={phsensor} alt="pH-Sensor" width="300rem" loading="lazy" style="aspect-ratio: 1/1;">
 			<h3>pH-Sensor</h3>
 			<a href="/mint/sensor/ph">
 				<Button>

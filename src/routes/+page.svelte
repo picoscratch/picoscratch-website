@@ -1,8 +1,10 @@
 <script>
 	// import Card from "$lib/Card.svelte";
-	import learnpic from "$lib/images/blocks.png";
-	import mint from "$lib/images/mint/front.png";
-    import { Button, Card } from "picoscratch-ui";
+	// @ts-ignore
+	import learnpic from "$lib/images/blocks.png?format=webp&w=512";
+	// @ts-ignore
+	import mint from "$lib/images/mint/front.png?format=webp&w=512";
+	import { Button, Card } from "picoscratch-ui";
 </script>
 
 <svelte:head>
