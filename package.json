@@ -31,7 +31,7 @@
   "dependencies": {
     "@fontsource-variable/quicksand": "^5.0.16",
     "bits-ui": "^0.21.11",
-    "picoscratch-ui": "^0.0.17",
+    "picoscratch-ui": "^0.0.18",
     "vaul-svelte": "^0.3.2"
   }
 }
