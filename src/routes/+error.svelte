@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 </script>
 
 <svelte:head>
@@ -22,9 +22,9 @@
 
 <div class="sections">
 	<section>
-		<h1 style="font-size: 4em;">{$page.status}</h1>
-		{#if $page.error}
-			<h2>{$page.error.message}</h2>
+		<h1 style="font-size: 4em;">{page.status}</h1>
+		{#if page.error}
+			<h2>{page.error.message}</h2>
 		{/if}
 	</section>
 	<section>

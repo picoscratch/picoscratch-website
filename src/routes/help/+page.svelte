@@ -59,15 +59,21 @@ import AccordionItem from "$lib/AccordionItem.svelte";
 <section>
 	<Accordion>
 		<AccordionItem>
-			<span slot="title">Wie mache ich ...?</span>
+			{#snippet title()}
+						<span >Wie mache ich ...?</span>
+					{/snippet}
 			Wir arbeiten immer dran, die Software noch verständlicher zu machen. <a href="mailto:jannik.eckhardt2009@gmail.com">Bitte kontaktieren Sie uns</a>.
 		</AccordionItem>
 		<AccordionItem>
-			<span slot="title">PicoScratch funktioniert nicht!</span>
+			{#snippet title()}
+						<span >PicoScratch funktioniert nicht!</span>
+					{/snippet}
 			Das tut uns leid. Bitte schauen sie auf unsere <a href="https://status.picoscratch.de">Status Seite</a> oder <a href="mailto:jannik.eckhardt2009@gmail.com">schreiben Sie uns</a>.
 		</AccordionItem>
 		<AccordionItem>
-			<span slot="title">Kontakt/Alles weitere</span>
+			{#snippet title()}
+						<span >Kontakt/Alles weitere</span>
+					{/snippet}
 			<a href="mailto:jannik.eckhardt2009@gmail.com">
 				Schreiben Sie uns eine Email
 			</a>

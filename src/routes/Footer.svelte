@@ -1,12 +1,3 @@
-<script lang="ts">
-	import { page } from '$app/stores';
-	let path = "/";
-	$: {
-		path = $page.url.pathname;
-		console.log(path);
-	}
-</script>
-
 <footer>
 	<span style="font-weight: 600;">PicoScratch</span>
 	<span>&middot;</span>

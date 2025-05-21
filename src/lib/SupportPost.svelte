@@ -1,9 +1,7 @@
-<script>
+<script lang="ts">
 	import { Button, Card } from "picoscratch-ui";
 	
-	export let title;
-	export let description;
-	export let link;
+	let { title, description, link } = $props();
 </script>
 
 <!-- <div class="support-post"> -->

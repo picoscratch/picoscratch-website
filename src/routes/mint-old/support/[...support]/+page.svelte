@@ -2,10 +2,16 @@
 	import { page } from "$app/stores";
     import { Breadcrumb } from "picoscratch-ui";
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').PageData} data
+	 */
 
-	$: path = $page.params.support.split("/");
+	/** @type {Props} */
+	let { data } = $props();
+
+	let path = $derived($page.params.support.split("/"));
 
 	function humanizeId(str) {
 		return str.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
@@ -65,7 +71,7 @@
 	<p class="text-muted-foreground text-xl">{data.meta.description}</p>
 </section>
 <article class="content">
-	<svelte:component this={data.content} />
+	<data.content />
 </article>
 
 <style>

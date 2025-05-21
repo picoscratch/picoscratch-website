@@ -10,7 +10,7 @@
 	import phSensor from "$lib/images/mint/sensors/ph.png?format=webp&w=512";
 	import PlusMinusIcon from "svelte-fluentui-icons/icons/AddSubtractCircle_Filled.svelte";
 	import RangeIcon from "svelte-fluentui-icons/icons/ScaleFit_Filled.svelte";
-	import { page } from "$app/stores";
+	import { page } from "$app/state";
 	import { goto } from "$app/navigation";
 	import { onMount } from "svelte";
 	import { Button } from "picoscratch-ui";
@@ -47,7 +47,7 @@
 		}
 	};
 
-	const info = $page.params.sensor in INFOLIST ? INFOLIST[$page.params.sensor] : {pic: "", name: "", accuracy: "", range: "", error: true};
+	const info = page.params.sensor in INFOLIST ? INFOLIST[page.params.sensor] : {pic: "", name: "", accuracy: "", range: "", error: true};
 
 	onMount(() => {
 		if(info.error == true) {
@@ -55,7 +55,7 @@
 		}
 	});
 
-	let newsletterOpen = false;
+	let newsletterOpen = $state(false);
 </script>
 
 <svelte:head>

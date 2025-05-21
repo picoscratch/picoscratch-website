@@ -1,9 +1,14 @@
-<script>
+<script lang="ts">
     import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
 	import { onNavigate } from '$app/navigation';
 	import "picoscratch-ui/css";
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -26,7 +31,7 @@
 	<Header />
 
 	<main>
-		<slot />
+		{@render children?.()}
 	</main>
 
 	<Footer />

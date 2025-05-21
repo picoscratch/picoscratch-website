@@ -17,7 +17,7 @@
     // import AccordionItem from "$lib/AccordionItem.svelte";
     import { Button } from "picoscratch-ui";
 
-	let downloadDialogOpen = false;
+	let downloadDialogOpen = $state(false);
 
 	/**
 	 * @param {string} url

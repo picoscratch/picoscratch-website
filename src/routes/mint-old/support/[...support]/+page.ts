@@ -40,7 +40,7 @@ export async function load({ params, data }) {
 	} catch (e) {
 		console.log(e);
 		
-		throw error(404, `Could not find ${params.support}`)
+		error(404, `Could not find ${params.support}`);
 	}
 
 	return {

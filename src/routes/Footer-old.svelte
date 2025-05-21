@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { page } from '$app/stores';
-	let path = "/";
-	$: {
+	let path = $state("/");
+	run(() => {
 		path = $page.url.pathname;
 		console.log(path);
-	}
+	});
 </script>
 
 <footer class={path == "/help" ? "help" : ""}>

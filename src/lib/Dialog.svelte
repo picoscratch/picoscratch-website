@@ -1,14 +1,24 @@
 <script>
-	export let open = false;
+	import { run, self, createBubbler, stopPropagation } from 'svelte/legacy';
+
+	const bubble = createBubbler();
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [open]
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let { open = $bindable(false), children } = $props();
 
 	/**
 	 * @type {HTMLDialogElement}
 	 */
-	let dialog;
-	let animatingOut = false;
+	let dialog = $state();
+	let animatingOut = $state(false);
 
 	// $: if (dialog && open) dialog.showModal();
-	$: {
+	run(() => {
 		if(dialog) {
 			if(open) dialog.showModal();
 			else {
@@ -19,19 +29,19 @@
 				}, 500);
 			}
 		}
-	}
+	});
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 <dialog
 	bind:this={dialog}
-	on:close={() => (open = false)}
-	on:click|self={() => dialog.close()}
+	onclose={() => (open = false)}
+	onclick={self(() => dialog.close())}
 	class:out={animatingOut}
 >
-	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
-		<slot></slot>
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<div onclick={stopPropagation(bubble('click'))}>
+		{@render children?.()}
 	</div>
 </dialog>
 

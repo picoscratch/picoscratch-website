@@ -24,7 +24,7 @@
 	import { onMount } from "svelte";
 	import MintPreorderDialog from "$lib/mint/preorderDialog/MINTPreorderDialog.svelte";
 	
-	let newsletterOpen = false;
+	let newsletterOpen = $state(false);
 </script>
 
 <svelte:head>

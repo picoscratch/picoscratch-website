@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fade } from "svelte/transition";
-	let downloadStarted = false;
+	let downloadStarted = $state(false);
 	
 	async function parseUpdateYML(url: string) {
 		const latest = await fetch(url).then(r => r.text());
@@ -114,7 +114,7 @@
 		<h2>PicoScratch Learn</h2>
 		<span>Die Lernsoftware für den Pico.</span>
 	</div>
-	<button style="background-color: #389438;" on:click={downloadLearnWin}>Download für Windows</button>
+	<button style="background-color: #389438;" onclick={downloadLearnWin}>Download für Windows</button>
 	<button style="background-color: #389438;" disabled>
 		<strike>Download für Linux</strike>
 	</button>

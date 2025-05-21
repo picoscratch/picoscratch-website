@@ -8,13 +8,10 @@
 	import NavigationFilled from "svelte-fluentui-icons/icons/Navigation_Filled.svelte"
 	// @ts-ignore
 	import Open from "svelte-fluentui-icons/icons/Open_Filled.svelte"
-	let path = "/";
-	$: {
-		path = $page.url.pathname;
-		console.log(path);
-	}
-	let navBtn: HTMLButtonElement;
-	let navShown = false;
+	let path = $derived($page.url.pathname);
+	$inspect(path);
+	let navBtn: HTMLButtonElement = $state();
+	let navShown = $state(false);
 	onMount(() => {
 		navBtn.addEventListener("click", () => {
 			navShown = !navShown;

@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from "svelte";
 	import MintPreorderDialogDialog from "./MINTPreorderDialogDialog.svelte";
 	import MintPreorderDialogDrawer from "./MINTPreorderDialogDrawer.svelte";
 
-	let isDesktop = true;
-	export let open;
+	let isDesktop = $state(true);
+	let { open = $bindable() } = $props();
 
 	onMount(() => {
 		isDesktop = window.innerWidth > 768;
