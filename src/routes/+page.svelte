@@ -20,7 +20,7 @@
 	<Card.Root style="width: var(--card-width); height: var(--card-height); display: flex; justify-content: center; padding-bottom: 10px;">
 		<img src={mint} alt="PicoScratch Learn" width="80%">
 		<h2>PicoScratch Messgerät</h2>
-		<span>Das beste für Ihren MINT-Unterricht!</span>
+		<span>Messen. Verstehen. Anwenden - im MINT-Unterricht</span>
 		<a href="/mint">
 			<Button class="primary">Mehr</Button>
 		</a>
@@ -38,7 +38,7 @@
 <style>
 	#products {
 		--card-width: 30rem;
-		--card-height: 35rem;
+		--card-height: 40rem;
 		display: flex;
 		flex-wrap: wrap;
 		flex: 1 0 auto;

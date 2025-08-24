@@ -14,16 +14,16 @@
 <Dialog.Root bind:open>
 	<Dialog.Content>
 		<Dialog.Header>
-			<Dialog.Title>Vorbestellung MINT-Messgerät</Dialog.Title>
+			<Dialog.Title>Warteliste MINT-Messgerät</Dialog.Title>
 		</Dialog.Header>
 		{#if state == "start"}
-		<span>Tragen Sie sich in unseren Newsletter ein, und wir benachrichtigen Sie sobald Sie unser Messgerät bald erhalten können!</span>
+		<span>Melden Sie sich an und wir informieren Sie, sobald Ihr Messgerät verschickt werden kann!</span>
 		<Input type="email" placeholder="E-Mail" style="text-align: center;" bind:value={mail} />
 		<div class="buttons">
 			<Button variant="secondary" on:click={() => {
 				open = false;
 			}}>Abbrechen</Button>
-			<Button on:click={async () => {
+			<Button data-rybbit-event="preorder" on:click={async () => {
 				state = "load";
 				const res = await fetch("https://mintsrv.picoscratch.de/api/subNewsletter", {
 					method: "POST",

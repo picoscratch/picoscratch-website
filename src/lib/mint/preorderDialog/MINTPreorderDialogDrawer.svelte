@@ -15,13 +15,13 @@
 <Drawer.Root bind:open>
 	<Drawer.Content>
 		<Drawer.Header>
-			<Drawer.Title>Vorbestellung MINT-Messgerät</Drawer.Title>
+			<Drawer.Title>Warteliste MINT-Messgerät</Drawer.Title>
 		</Drawer.Header>
 		{#if state == "start"}
-		<span style="padding-left: 15px; padding-right: 15px;">Tragen Sie sich in unseren Newsletter ein, und wir benachrichtigen Sie sobald Sie unser Messgerät bald erhalten können!</span>
+		<span style="padding-left: 15px; padding-right: 15px;">Melden Sie sich an und wir informieren Sie, sobald Ihr Messgerät verschickt werden kann!</span>
 		<Input type="email" placeholder="E-Mail" style="text-align: center; margin-left: 15px; margin-right: 15px; width: calc(100% - 15px - 15px);" bind:value={mail} />
 		<Drawer.Footer>
-			<Button class="primary" on:click={async () => {
+			<Button data-rybbit-event="preorder" class="primary" on:click={async () => {
 				state = "load";
 				const res = await fetch("https://mintsrv.picoscratch.de/api/subNewsletter", {
 					method: "POST",

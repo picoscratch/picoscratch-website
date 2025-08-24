@@ -31,8 +31,11 @@
   "type": "module",
   "dependencies": {
     "@fontsource-variable/quicksand": "^5.0.16",
+    "@threlte/core": "^8.0.4",
+    "@threlte/extras": "^9.2.1",
     "bits-ui": "^0.21.11",
     "picoscratch-ui": "^0.0.18",
+    "three": "^0.176.0",
     "vaul-svelte": "^0.3.2"
   }
 }
